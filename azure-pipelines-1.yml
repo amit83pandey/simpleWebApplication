@@ -35,6 +35,10 @@ steps:
         appType: 'webApp'
         WebAppName: 'SimpleAppl'
         packageForLinux: 'd:\a\1\a\target\simpleWebApplication.1-0.0.1-SNAPSHOT.war' 
+
+#BeatBlip Integration steps
+
+#Step1 Downloading Zip File
 - script: curl -o beatblipconsole.zip http://beatblipdemo.agreeya.net/BeatBlipSubscriptionUI/BeatBlipConsole.zip
   displayName: 'Download Zip file'
 
