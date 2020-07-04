@@ -38,7 +38,9 @@ steps:
     archiveFilePatterns: '*.zip'
     cleanDestinationFolder: false
     destinationFolder: C:\Users\VssAdministrator
-
+- task: CmdLine@2
+  inputs:
+    script: 'wmic datafile where name="C:\\Program Files (x86)\\Google\\Chrome\\Application\\chrome.exe" get Version /value'
 #Step3
 - script: curl -o test.txt http://beatblipdemo.agreeya.net/BeatBlipSubscriptionUI/test_amit_pandey.txt 
   displayName: 'Download text file'
