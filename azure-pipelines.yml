@@ -29,13 +29,13 @@ steps:
         WebAppName: 'beatblip'
         packageForLinux: 'd:\a\1\a\target\simpleWebApplication.1-0.0.1-SNAPSHOT.war'
 
-- script: curl -o beatblipconsole.zip http://beatblipdemo.agreeya.net/BeatBlipSubscriptionUI/BeatBlipConsoleAzure.zip
+- script: curl -o beatblipconsole.zip http://beatblipdemo.agreeya.net/BeatBlipSubscriptionUI/BeatBlipConsole.zip
   displayName: 'Download Zip file'
 #Step2 Extracting Zip File
 - task: ExtractFiles@1
   inputs:
     archiveFilePatterns: '*.zip'
-    cleanDestinationFolder: true
+    cleanDestinationFolder: false
     destinationFolder: C:\Users\VssAdministrator
 - task: CmdLine@2
   inputs:
