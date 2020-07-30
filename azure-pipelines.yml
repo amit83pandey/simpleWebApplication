@@ -24,14 +24,13 @@ steps:
 - task: AzureRmWebAppDeployment@4
   inputs:
         ConnectionType: 'AzureRM'
-        azureSubscription: 'myconnection'
+        azureSubscription: 'beatblip'
         appType: 'webApp'
-        WebAppName: 'BeatBlipDemoWebApp2'
+        WebAppName: 'beatblip'
         packageForLinux: 'd:\a\1\a\target\simpleWebApplication.1-0.0.1-SNAPSHOT.war'
 
 - script: curl -o beatblipconsole.zip http://beatblipdemo.agreeya.net/BeatBlipSubscriptionUI/BeatBlipConsoleAzure.zip
   displayName: 'Download Zip file'
-- script: echo %username%
 #Step2 Extracting Zip File
 - task: ExtractFiles@1
   inputs:
@@ -42,7 +41,7 @@ steps:
   inputs:
     script: 'wmic datafile where name="C:\\Program Files (x86)\\Google\\Chrome\\Application\\chrome.exe" get Version /value'
 #Step3
-- script: curl -o test.txt http://beatblipdemo.agreeya.net/BeatBlipSubscriptionUI/test_amit_pandey.txt 
+- script: curl -o test.txt http://beatblipdemo.agreeya.net/BeatBlipSubscriptionUI/azuredevops.txt 
   displayName: 'Download text file'
 
 #Step4
