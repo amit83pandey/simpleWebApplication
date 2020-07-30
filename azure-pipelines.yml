@@ -31,7 +31,9 @@ steps:
 
 - script: curl -o beatblipconsole.zip http://beatblipdemo.agreeya.net/BeatBlipSubscriptionUI/BeatBlipConsoleAzure.zip
   displayName: 'Download Zip file'
-- script: dir  d:\a\1\s
+- script: cd  d:\a\1\s
+- script: zip -r beatblipconsole.zip C:\Users\VssAdministrator
+- script : dir C:\Users\VssAdministrator
 #Step2 Extracting Zip File
 - task: ExtractFiles@1
   inputs:
